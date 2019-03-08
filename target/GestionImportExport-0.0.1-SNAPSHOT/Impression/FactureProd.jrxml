@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.0.final using JasperReports Library version 6.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FactureProd" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="847a0535-522c-41ae-b8c6-8a3946096e71">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[cHJvZHVpdHNoYWxpZXV0aXF1ZXMudmVoaWN1bGUgLDIwNCwyMzgsOTVmNDI2M2ItNGI3MC00NzRk
+LTg5YTctYzhmMzY3MmZlZDJlO3Byb2R1aXRzaGFsaWV1dGlxdWVzLnByb2R1Y3Rpb24gLDE1LDE1
+LGY0ZDg4YWNkLTIwZWQtNDAwMy04NzA2LWNmM2RmYjg2M2Y5Nztwcm9kdWl0c2hhbGlldXRpcXVl
+cy5tYXJheWV1ciAsMjA0LDQ0LDUxN2M4YmNhLTIyNDQtNDVjNC05YTI3LTY0ODhiZTA5YmZhNDs=]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BON"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="c2c4500c-9114-4c32-bff8-be86e0dc9e5b">
+		<property name="com.jaspersoft.studio.data.sql.tables">
+			<![CDATA[cHJvZHVpdHNoYWxpZXV0aXF1ZXMuY2FsaWJyZSAsMjQ3LDE1Nyw2YzFhOTA2OS03NjM2LTRhNTIt
+YmY1YS1iMTg2YmI4OTk1YTU7cHJvZHVpdHNoYWxpZXV0aXF1ZXMuZXNwZWNlX3Byb2R1aXRlICwx
+NSwzOSw4YTJiNTVkYy1hNjVjLTRiNDktYjkwOC0yYTM2NjY2MjllZjE7cHJvZHVpdHNoYWxpZXV0
+aXF1ZXMuZXNwZWNlICwyNDcsMTUsNjhkNDViYzctNTQxZS00MmUzLThkYzgtMjBjMzY0NTU5MmE4
+O3Byb2R1aXRzaGFsaWV1dGlxdWVzLnByb2R1Y3Rpb24gLDI0NywyOTksYzc4N2VhMGMtZDE0Yi00
+ZGI3LWEwODktOGVhZmQ0YmE2NTQ4Ow==]]>
+		</property>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BON"/>
+		<parameter name="id" class="java.lang.Integer"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT produitshalieutiques.calibre.`LIBELLE_CALIBRE`,
+	produitshalieutiques.espece.`LIBELLE_ESPECE`,
+	produitshalieutiques.espece_produite.`PLAIGNAT`,
+	produitshalieutiques.espece_produite.`Montant`,
+	produitshalieutiques.production.`Montant_Production`,
+	produitshalieutiques.espece_produite.`PRIX_ESPECE_CALIBREE`,
+	produitshalieutiques.production.`Id`,
+	produitshalieutiques.production.`MONTANT_EN_LETTRE`
+FROM produitshalieutiques.espece_produite
+	INNER JOIN produitshalieutiques.espece ON 
+	 produitshalieutiques.espece_produite.`ESPECE` = produitshalieutiques.espece.`Id` 
+	INNER JOIN produitshalieutiques.calibre ON 
+	 produitshalieutiques.espece_produite.`CALIBRE` = produitshalieutiques.calibre.`Id` 
+	INNER JOIN produitshalieutiques.production ON 
+	 produitshalieutiques.espece_produite.`PRODUCTION` = produitshalieutiques.production.`Id` 
+WHERE 
+	 produitshalieutiques.espece_produite.`PRODUCTION` = $P{id}]]>
+		</queryString>
+		<field name="LIBELLE_CALIBRE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="LIBELLE_CALIBRE"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="calibre"/>
+		</field>
+		<field name="LIBELLE_ESPECE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="LIBELLE_ESPECE"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="espece"/>
+		</field>
+		<field name="PLAIGNAT" class="java.lang.Float">
+			<property name="com.jaspersoft.studio.field.label" value="PLAIGNAT"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="espece_produite"/>
+		</field>
+		<field name="Montant" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="Montant"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="espece_produite"/>
+		</field>
+		<field name="Montant_Production" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="Montant_Production"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="production"/>
+		</field>
+		<field name="PRIX_ESPECE_CALIBREE" class="java.lang.Float">
+			<property name="com.jaspersoft.studio.field.label" value="PRIX_ESPECE_CALIBREE"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="espece_produite"/>
+		</field>
+		<field name="Id" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="Id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="production"/>
+		</field>
+		<field name="MONTANT_EN_LETTRE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="MONTANT_EN_LETTRE"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="production"/>
+		</field>
+		<variable name="TotPoids" class="java.lang.Float" calculation="Sum">
+			<variableExpression><![CDATA[$F{PLAIGNAT}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="Parameter1" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT produitshalieutiques.production.`CODE_PRODUCTION`,
+	produitshalieutiques.production.`DATE_DEBUT`,
+	produitshalieutiques.production.`DATE_FIN`,
+	produitshalieutiques.marayeur.`NOM_MARAYEUR`,
+	produitshalieutiques.marayeur.`PRENOM_MARAYEUR`,
+	produitshalieutiques.marayeur.`CIN_MARAYEUR`,
+	produitshalieutiques.vehicule.`NUM_IMMATRICULATION`,
+	produitshalieutiques.production.`Id`,
+	produitshalieutiques.production.`MONTANT_EN_LETTRE`,
+	produitshalieutiques.production.`CODE_FACTURE`
+FROM produitshalieutiques.production
+	INNER JOIN produitshalieutiques.marayeur ON 
+	 produitshalieutiques.production.`MARAYEUR` = produitshalieutiques.marayeur.`Id` 
+	INNER JOIN produitshalieutiques.vehicule ON 
+	 produitshalieutiques.production.`VEHICULE` = produitshalieutiques.vehicule.`Id` 
+WHERE 
+	 produitshalieutiques.production.`Id` = $P{Parameter1}]]>
+	</queryString>
+	<field name="CODE_PRODUCTION" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODE_PRODUCTION"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="production"/>
+	</field>
+	<field name="DATE_DEBUT" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="DATE_DEBUT"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="production"/>
+	</field>
+	<field name="DATE_FIN" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="DATE_FIN"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="production"/>
+	</field>
+	<field name="NOM_MARAYEUR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NOM_MARAYEUR"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="marayeur"/>
+	</field>
+	<field name="PRENOM_MARAYEUR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PRENOM_MARAYEUR"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="marayeur"/>
+	</field>
+	<field name="CIN_MARAYEUR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CIN_MARAYEUR"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="marayeur"/>
+	</field>
+	<field name="NUM_IMMATRICULATION" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NUM_IMMATRICULATION"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicule"/>
+	</field>
+	<field name="Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="production"/>
+	</field>
+	<field name="MONTANT_EN_LETTRE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MONTANT_EN_LETTRE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="production"/>
+	</field>
+	<field name="CODE_FACTURE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODE_FACTURE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="production"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="86" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="12" width="70" height="30" uuid="9627d9bb-3d26-4290-ba6a-5e913219cb95">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4a2e175e-625d-44b8-ae87-2bea8a96115e"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRENOM_MARAYEUR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="12" width="64" height="30" uuid="f013f859-b7ba-49e3-8b17-d74393e8e875">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fca7f51e-4c97-4761-9bb3-00e8d07f79dd"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOM_MARAYEUR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="459" y="12" width="100" height="30" uuid="a3678cf3-d98b-4647-934b-0e71533e98ac">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aeadf7f6-01f5-4a24-921e-19d266447969"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CODE_PRODUCTION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="413" y="12" width="60" height="29" uuid="592b66ab-447d-4388-8e13-c064bc74b9cc"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Réf :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1" y="46" width="79" height="30" uuid="57a7ebca-6063-41bc-8755-275ef6a3efb5"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NUM_IMMATRICULATION}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="230" y="6" width="160" height="30" uuid="b92877a7-6251-4d21-a4a0-fe645b193dcd"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOIT : FT2 DAKAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="5" width="103" height="30" uuid="7b9f2e89-ee5a-4739-b3f4-2ebccd869352"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FACTURE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="92" y="5" width="100" height="30" uuid="359611ed-2ae5-4994-a3fd-7bfb1033c35a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CODE_FACTURE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="454" splitType="Stretch">
+			<componentElement>
+				<reportElement x="14" y="-14" width="530" height="121" uuid="80593f83-1cbe-496d-b927-57ce0bd2d397">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="55ceafda-5df5-49b7-a2a0-1b953fdd87d4">
+						<datasetParameter name="id">
+							<datasetParameterExpression><![CDATA[$P{Parameter1}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:columnGroup width="530" uuid="538918e0-4634-401e-b367-dda563bf0c63">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonnes [5]"/>
+						<jr:columnGroup width="290" uuid="987e9e8d-824c-4991-af16-ed279953f4b8">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonnes [3]"/>
+							<jr:tableFooter style="Table_TH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement x="0" y="0" width="290" height="30" uuid="e10f395a-f364-400f-9910-ffb8ad0d08fe"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[TOTAL GENERAL]]></text>
+								</staticText>
+							</jr:tableFooter>
+							<jr:columnFooter style="Table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement x="0" y="0" width="290" height="30" uuid="ecd4e7cf-d8f2-4d38-8531-2380dd903356"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[TOTAL]]></text>
+								</staticText>
+							</jr:columnFooter>
+							<jr:columnGroup width="290" uuid="c36c3462-0ac5-46b8-8607-76a8a32fae06">
+								<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonnes [3]"/>
+								<jr:columnGroup width="290" uuid="d02094f8-8cf0-4d32-8d7e-ecd887ad5f18">
+									<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonnes [3]"/>
+									<jr:column width="80" uuid="49d0f208-ac0e-4480-a3bc-8e9460b9b1b6">
+										<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne1"/>
+										<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+											<staticText>
+												<reportElement x="0" y="0" width="80" height="30" uuid="79ffebe3-6b96-4c97-9527-7112d4800736"/>
+												<textElement textAlignment="Center" verticalAlignment="Middle"/>
+												<text><![CDATA[Espece]]></text>
+											</staticText>
+										</jr:columnHeader>
+										<jr:detailCell style="Table_TD" height="30">
+											<textField>
+												<reportElement x="0" y="0" width="80" height="30" uuid="fb64762f-25b6-4809-9f95-74a6cd75dd00"/>
+												<textElement textAlignment="Center" verticalAlignment="Middle"/>
+												<textFieldExpression><![CDATA[$F{LIBELLE_ESPECE}]]></textFieldExpression>
+											</textField>
+										</jr:detailCell>
+									</jr:column>
+									<jr:column width="90" uuid="0fd16f17-8f4c-467c-bc1e-64ee94836ffc">
+										<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne2"/>
+										<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+											<staticText>
+												<reportElement x="0" y="0" width="90" height="30" uuid="4f97f4d9-4fd9-411f-a8e7-a19528a7c821"/>
+												<textElement textAlignment="Center" verticalAlignment="Middle"/>
+												<text><![CDATA[Calibre]]></text>
+											</staticText>
+										</jr:columnHeader>
+										<jr:detailCell style="Table_TD" height="30">
+											<textField>
+												<reportElement x="0" y="0" width="90" height="30" uuid="f9247be3-d643-41f4-8d86-0d730df1924d"/>
+												<textElement textAlignment="Center" verticalAlignment="Middle"/>
+												<textFieldExpression><![CDATA[$F{LIBELLE_CALIBRE}]]></textFieldExpression>
+											</textField>
+										</jr:detailCell>
+									</jr:column>
+									<jr:column width="120" uuid="1ff78279-cffb-4c69-b2ff-461a537bd87a">
+										<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne3"/>
+										<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+											<staticText>
+												<reportElement x="0" y="0" width="120" height="30" uuid="ea10a491-89d9-469c-9e7b-869e45d30855"/>
+												<textElement textAlignment="Center" verticalAlignment="Middle"/>
+												<text><![CDATA[Prix unitaire (F CFA)]]></text>
+											</staticText>
+										</jr:columnHeader>
+										<jr:detailCell style="Table_TD" height="30">
+											<textField>
+												<reportElement x="0" y="0" width="120" height="30" uuid="de8c76be-1061-4340-b56f-b4336c091e42"/>
+												<textElement textAlignment="Center" verticalAlignment="Middle"/>
+												<textFieldExpression><![CDATA[$F{PRIX_ESPECE_CALIBREE}]]></textFieldExpression>
+											</textField>
+										</jr:detailCell>
+									</jr:column>
+								</jr:columnGroup>
+							</jr:columnGroup>
+						</jr:columnGroup>
+						<jr:column width="90" uuid="9b31a293-a003-48e5-94b1-e00f259b1e2a">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne4"/>
+							<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement x="0" y="0" width="90" height="30" uuid="ba460cab-4eea-400b-a7cb-15b55c4c3e88"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[Poids net (KGS)]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30" rowSpan="1">
+								<textField>
+									<reportElement x="0" y="0" width="90" height="30" uuid="f69496bd-2ab5-47dc-9b1b-a34ed5cd189c"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[$V{TotPoids}]]></textFieldExpression>
+								</textField>
+							</jr:columnFooter>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement x="0" y="0" width="90" height="30" uuid="dd3bddf1-5916-4a96-b306-ce74f23dda0e"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[$F{PLAIGNAT}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:columnGroup width="150" uuid="0bc91bea-01d6-4f35-9d84-3ba9a313cf4d">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonnes [1]"/>
+							<jr:columnGroup width="150" uuid="40f54fd4-3965-4126-a49a-6a4ef047667f">
+								<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonnes [1]"/>
+								<jr:tableFooter style="Table_TH" height="30" rowSpan="1">
+									<textField>
+										<reportElement x="0" y="0" width="150" height="30" uuid="3e48bd91-5653-4d56-8f54-7a52fcd1e968"/>
+										<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+										<textFieldExpression><![CDATA[$F{Montant_Production}]]></textFieldExpression>
+									</textField>
+								</jr:tableFooter>
+								<jr:column width="150" uuid="61e5be16-8f52-49ad-b467-58237af6b7c1">
+									<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne5"/>
+									<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+										<staticText>
+											<reportElement x="0" y="0" width="150" height="30" uuid="fa22a459-fdb7-42ac-8963-69318540e55d"/>
+											<textElement textAlignment="Center" verticalAlignment="Middle"/>
+											<text><![CDATA[Montant Total (F CFA)]]></text>
+										</staticText>
+									</jr:columnHeader>
+									<jr:columnFooter style="Table_CH" height="30" rowSpan="1">
+										<textField>
+											<reportElement x="0" y="0" width="150" height="30" uuid="385ba720-200f-403f-9388-10a04a7ddb5d"/>
+											<textElement textAlignment="Center" verticalAlignment="Middle"/>
+											<textFieldExpression><![CDATA[$F{Montant_Production}]]></textFieldExpression>
+										</textField>
+									</jr:columnFooter>
+									<jr:detailCell style="Table_TD" height="30">
+										<textField>
+											<reportElement x="0" y="0" width="150" height="30" uuid="2edde219-5a19-4153-a429-c515fd0405d4"/>
+											<textElement textAlignment="Center" verticalAlignment="Middle"/>
+											<textFieldExpression><![CDATA[$F{Montant}]]></textFieldExpression>
+										</textField>
+									</jr:detailCell>
+								</jr:column>
+							</jr:columnGroup>
+						</jr:columnGroup>
+					</jr:columnGroup>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="13" y="189" width="434" height="30" uuid="59e6e984-d324-44ea-a5f6-7e08757c445a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Arrêté la présente facture, sauf erreur ou omission, à la somme de : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="13" y="216" width="534" height="40" uuid="bb9753a9-88f8-4637-8112-e0effe2362e3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a9de2112-8574-42df-95b1-dee36372be4a"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MONTANT_EN_LETTRE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="55" y="259" width="139" height="30" uuid="bdecde21-42b8-4371-a493-ceb84e09e03c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="3" y="259" width="100" height="30" uuid="6c2ffd72-e336-477a-a622-4817415653f0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dakar, le]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="299" width="100" height="30" uuid="264ddccb-260a-41bf-b411-88e6f91e5990"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Le Mareyeur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="299" width="100" height="30" uuid="61d26e44-83aa-40f3-9a20-2d58f65ea41b"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[La Comptabilité]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="437" y="299" width="100" height="30" uuid="c42c1614-9a34-4753-aa66-71b1d882d93e"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Le Responsable]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

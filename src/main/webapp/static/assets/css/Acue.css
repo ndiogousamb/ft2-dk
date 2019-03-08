@@ -1,0 +1,314 @@
+body {
+	background-image: url(../img/imgAccueil/BACKGROUND.jpg);
+	background-size: cover;
+}
+
+#general {
+	
+}
+.ajoupro{
+	position: absolute;
+	width:235px; 
+	height:260px;
+	margin: 20px 70px;
+}
+.modpro{
+	background: transparent;
+	position: absolute;
+	width:235px; 
+	height:260px;
+	margin: 20px 385px;
+}
+.conpro{
+	position: absolute;
+	width:235px; 
+	height:260px;
+	margin: 20px 700px;
+}
+.crven{
+	position: absolute;
+	width:235px; 
+	height:260px;
+	margin: 20px 70px;
+}
+.modven{
+	background: transparent;
+	position: absolute;
+	width:235px; 
+	height:260px;
+	margin: 20px 385px;
+}
+.conven{
+	position: absolute;
+	width:235px; 
+	height:260px;
+	margin: 20px 700px;
+}
+.facpro{
+	position: absolute;
+	width:235px; 
+	height:250px;
+	margin: 20px 70px;
+}
+.facdebr{
+	position: absolute;
+	width:235px; 
+	height:260px;
+	margin: 20px 550px;
+}
+.facvenlo{
+	position: absolute;
+	width:235px; 
+	height:250px;
+	margin: 270px 550px;
+}
+.facexpo{
+	position: absolute;
+	width:235px; 
+	height:245px;
+	margin: 270px 70px;
+}
+.ajouexp{
+	position: absolute;
+	width:235px; 
+	height:260px;
+	margin: 20px 70px;
+}
+.modiexp{
+	background: transparent;
+	position: absolute;
+	width:235px; 
+	height:260px;
+	margin: 20px 385px;
+}
+.conexp{
+	position: absolute;
+	width:235px; 
+	height:260px;
+	margin: 20px 700px;
+}
+.ajoudeb{
+	position: absolute;
+	width:235px; 
+	height:260px;
+	margin: 20px 70px;
+}
+.modideb{
+	background: transparent;
+	position: absolute;
+	width:235px; 
+	height:260px;
+	margin: 20px 385px;
+}
+.condeb{
+	position: absolute;
+	width:235px; 
+	height:260px;
+	margin: 20px 700px;
+}
+#head {
+	width: 1400px;
+	height: 80px;
+	background-color: transparent;
+	margin: 30px auto;
+}
+
+#gauche {
+	position: absolute;
+	width: 304px;
+	height: 535px;
+	background-color: transparent;
+	margin: -5px 20px;
+	border-radius: 22px;
+}
+
+#droite {
+	position: absolute;
+	width: 974px;
+	height: 600px;
+	background-color: transparent;
+	margin: -5px 350px;
+	border-radius: 22px;
+	position: absolute;
+	width: 950px;
+	height: auto;
+	border: 10px;
+	border-color:;
+	margin: -5px 350px;
+	border-radius: 22px;
+	background-image: url(../img/imgAccueil/ACCUEIL_12.png);
+	background-size: cover;
+}
+
+.config {
+	position: relative;
+	width: 320px;
+	height: 90px;
+	margin: -25px 10px;
+}
+
+.conec {
+	position: absolute;
+	width: 320px;
+	height: 90px;
+	margin: -25px 655px;
+}
+
+.bienvenu{
+	position:absolute;
+	background-color: #25aae1;
+	width: 675px;
+	height: 70px;
+	margin: -15px 320px;
+	padding:20px;
+	box-shadow: 8px 8px 8px #444261 ;
+}
+
+p{
+	position: relative;
+	
+	font-size: 28px;
+	color: white;
+	font-family: serif;
+}
+
+.menu {
+	position: absolute;
+	width: 342px;
+	height: 65px;
+	margin: -15px -15px;
+}
+
+.produc {
+	position: absolute;
+	width: 342px;
+	height: 55px;
+	margin: 50px -15px;
+}
+
+.demoul {
+	position: absolute;
+	width: 342px;
+	height: 56px;
+	margin: 105px -15px;
+}
+
+.stock {
+	position: absolute;
+	width: 342px;
+	height: 55px;
+	margin: 160px -15px;
+}
+
+.vente {
+	position: absolute;
+	width: 342px;
+	height: 58px;
+	margin: 216px -15px;
+}
+
+.location {
+	position: absolute;
+	width: 342px;
+	height: 62px;
+	margin: 275px -15px;
+}
+
+.factu {
+	position: absolute;
+	width: 342px;
+	height: 60px;
+	margin: 337px -15px;
+}
+
+.debar {
+	position: absolute;
+	width: 342px;
+	height: 60px;
+	margin: 397px -15px;
+}
+
+.rechercher {
+	position: absolute;
+	width: 330px;
+	height: 70px;
+	margin: 457px -10px;
+	margin-right: 1%;
+}
+
+.ventelocal {
+	position: absolute;
+	width: 235px;
+	height: 250px;
+	margin: 20px 70px;
+}
+
+.locatstock {
+	position: absolute;
+	width: 235px;
+	height: 260px;
+	margin: 20px 385px;
+}
+
+.stock1 {
+	position: absolute;
+	width: 235px;
+	height: 250px;
+	margin: 20px 700px;
+}
+
+.facturation1 {
+	position: absolute;
+	width: 235px;
+	height: 245px;
+	margin: 270px 70px;
+}
+
+.admin {
+	position: absolute;
+	width: 235px;
+	height: 235px;
+	margin: 280px 385px;
+}
+
+.para {
+	position: absolute;
+	width: 235px;
+	height: 245px;
+	margin: 270px 700px;
+}
+
+.image14 {
+	position: absolute;
+	margin: 20px 1px;
+	width: 69px;
+	height: 495px;
+}
+
+.image12 {
+	position: absolute;
+	margin: 0px 1px;
+	width: 950px;
+	height: 20px;
+}
+
+.image20 {
+	position: absolute;
+	margin: 20px 935px;
+	width: 16px;
+	height: 495px;
+}
+
+.image16 {
+	position: absolute;
+	margin: 20px 305px;
+	width: 80px;
+	height: 495px;
+}
+
+.image18 {
+	position: absolute;
+	margin: 20px 620px;
+	width: 80px;
+	height: 495px;
+}

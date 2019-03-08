@@ -1,0 +1,87 @@
+body {
+      background-image: url("../img/BACKGROUND_Connexion.jpg");
+    background-size: cover;
+    
+    }
+#GE{ 
+  width:450px;
+  background-color:transparent;
+  margin: 0 auto;
+  height: 100px;
+    }
+
+.forml-img {
+        margin-top:20px;
+    }
+	
+     .forml {
+         margin: 0 auto;
+     }
+.InputId {
+	  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        width:100%;
+        height:80px;
+        text-align:center;
+        background: url("../img/IDENTIFIANT_Connexion.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border: transparent solid 0px;
+        border-radius:15px;
+        font-size:30px;
+        color: #ffffff;
+        display: block;
+
+        
+
+    }        
+.Input{
+        margin-left:25px;
+    } 
+.InputMdp {
+        width:100%;
+        height:80px;
+        text-align:center;
+        background: url("../img/MOT_DE_PASSE.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border: transparent solid 0px;
+        border-radius:15px;
+        font-size:30px;
+        color: #fff0f6;
+    }        
+.BtnEN {
+        width:270px;
+        height:60px;
+        text-align: center;
+        background:#bf0020 ;
+        border: transparent solid 0px;
+        border-radius:15px;
+        font-size:30px;
+        color: #fff0f6;
+    } 
+.BtnSC {
+        width:270px;
+        height:60px;
+        text-align: center;
+        background:dodgerblue;
+        border: transparent solid 0px;
+        border-radius:15px;
+        font-size:30px;
+        color: #fff0f6;
+        padding: 4px;
+
+    }       

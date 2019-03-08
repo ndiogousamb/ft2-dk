@@ -1,0 +1,279 @@
+body {
+	background-image: url(../img/BACKGROUND.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#GE {
+	width: 1400px;
+	height: 740px;
+	background-color: transparent;
+	margin: 0 auto;
+}
+
+#gauche {
+	background-image: url(../img/FORMULAIRE-INSCRIPTION_18.png);
+	position: absolute;
+	left: 120px;
+	top: 200px;
+	width: 370px;
+	height: 300px;
+	background-repeat: no-repeat;
+}
+
+#droite {
+	position: absolute;
+	width: 800px;
+	height: 730px;
+	right: 50px;
+	top: 12px;
+	background-color: transparent;
+}
+
+.insc {
+	position: absolute;
+	left: 220px;
+	top: 0px;
+	width: 110px;
+	height: 70px;
+	color: white;
+}
+
+.insc2 {
+	position: absolute;
+	left: 350px;
+	top: 35px;
+	width: 210px;
+	height: 25px;
+	color: white;
+}
+
+.pre {
+	position: absolute;
+	left: 70px;
+	top: 100px;
+	width: 136px;
+	height: 16px;
+	color: white;
+	font-size: 22px;
+}
+
+.nom {
+	
+	
+/* 	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
+		ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out
+		.15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; */
+	position: absolute;
+	left: 190px;
+	top: 100px;
+	width: 136px;
+	height: 16px;
+	color: white;
+	font-size: 22px;
+}
+
+.identifiant {
+	position: absolute;
+	left: 70px;
+	top: 200px;
+	width: 130px;
+	height: 16px;
+	color: white;
+	font-size: 22px;
+}
+
+.motdepasse {
+	position: absolute;
+	left: 70px;
+	top: 300px;
+	width: 130px;
+	height: 16px;
+	color: white;
+	font-size: 22px;
+}
+
+.confir {
+	position: absolute;
+	left: 70px;
+	top: 390px;
+	width: 130px;
+	height: 16px;
+	color: white;
+	font-size: 22px;
+}
+
+.depass {
+	position: absolute;
+	left: 200px;
+	top: 390px;
+	width: 130px;
+	height: 16px;
+	color: white;
+	font-size: 22px;
+}
+
+.profil {
+	position: absolute;
+	left: 70px;
+	top: 490px;
+	width: 130px;
+	height: 16px;
+	color: white;
+	font-size: 22px;
+}
+
+.role {
+	position: absolute;
+	left: 70px;
+	top: 580px;
+	width: 130px;
+	height: 16px;
+	color: white;
+	font-size: 22px;
+}
+
+.inp {
+	position: absolute;
+	left: 340px;
+	top: 90px;
+	width: 410px;
+	height: 63px;
+	background: url("../img/FORMULAIRE-INSCRIPTION_11.png");
+	background-color: transparent;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border: transparent solid 6px;
+	text-align: center;
+	padding: 16px;
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.inp1 {
+	position: absolute;
+	left: 340px;
+	top: 190px;
+	width: 410px;
+	height: 63px;
+	background: url("../img/FORMULAIRE-INSCRIPTION_11.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border: transparent solid 6px;
+	text-align: center;
+	padding: 16px;
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.inp2 {
+	position: absolute;
+	left: 340px;
+	top: 290px;
+	width: 410px;
+	height: 63px;
+	background: url("../img/FORMULAIRE-INSCRIPTION_11.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border: transparent solid 6px;
+	text-align: center;
+	padding: 16px;
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.inp3 {
+	position: absolute;
+	left: 340px;
+	top: 380px;
+	width: 410px;
+	height: 63px;
+	background: url("../img/FORMULAIRE-INSCRIPTION_11.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border: transparent solid 6px;
+	text-align: center;
+	padding: 18px;
+	color: #ffffff;
+	font-size: 20px;
+}
+
+#sele1 {
+	position: absolute;
+	margin: 475px 340px;
+	width: 410px;
+	height: 63px;
+	background: url("../img/FORMULAIRE-INSCRIPTION_11.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border: transparent solid 6px;
+	text-align: center;
+	padding: 16px;
+	color: #ffffff;
+}
+
+select {
+	width: 360px;
+	height: 50px;
+	margin: 5px 5px;
+	border: transparent;
+	background-color: transparent;
+	color: white;
+	border-radius: 12px;
+	font-size: 18px;
+}
+
+#sele2 {
+	position: absolute;
+	margin: 570px 340px;
+	width: 410px;
+	height: 63px;
+	background: url("../img/FORMULAIRE-INSCRIPTION_11.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border: transparent solid 6px;
+	text-align: center;
+	padding: 16px;
+	color: #ffffff;
+}
+
+option {
+	background-color: #6dadb9;
+}
+
+.BtnAN {
+	position: absolute;
+	width: 170px;
+	height: 70px;
+	text-align: center;
+	background: #bf0020;
+	border: transparent solid 0px;
+	border-radius: 15px;
+	font-size: 25px;
+	color: #fff0f6;
+	margin: 670px 590px;
+}
+
+.BtnIN {
+	position: absolute;
+	width: 170px;
+	height: 70px;
+	text-align: center;
+	background: dodgerblue;
+	border: transparent solid 0px;
+	border-radius: 15px;
+	font-size: 25px;
+	color: #fff0f6;
+	padding: 4px;
+	margin: 670px 355px;
+}
+
+#bas {
+	position: absolute;
+	padding-top: 15px;
+}
