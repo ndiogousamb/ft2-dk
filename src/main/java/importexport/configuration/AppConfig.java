@@ -17,7 +17,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration//class de configuration
 @EnableWebMvc //web MVC
-@ComponentScan(basePackages = "importexport.*")//package de base
+@ComponentScan(basePackages = "importexport")//package de base
 public class AppConfig extends WebMvcConfigurerAdapter{
 	
 	@Bean(name="multipartResolver")
